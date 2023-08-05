@@ -3,6 +3,10 @@
 #include <bio.h>
 #include <ctype.h>
 
+#define getc tf_getc
+#define ungetc tf_ungetc
+#define getline tf_getline
+
 enum{
 	Nfont = 11,
 	Wid = 20	/* tmac.anhtml sets page width to 20" so we can recognize .nf text */
