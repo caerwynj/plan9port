@@ -4,6 +4,9 @@
 #include <httpd.h>
 #include "escape.h"
 
+#define getc httpd_getc
+#define ungetc httpd_ungetc
+
 typedef struct Hlex	Hlex;
 typedef struct MimeHead	MimeHead;
 

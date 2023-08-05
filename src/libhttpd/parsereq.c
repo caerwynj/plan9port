@@ -3,6 +3,8 @@
 #include <bin.h>
 #include <httpd.h>
 
+#define getc pr_getc
+
 typedef struct Strings		Strings;
 
 struct Strings

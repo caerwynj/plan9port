@@ -65,7 +65,7 @@ int		getnr(Rune*);
 int		getnrr(Rune*);
 int		getrune(void);
 Rune*	getqarg(void);
-Rune*	getline(void);
+//Rune*	getline(void);
 void		hideihtml(void);
 void		html(Rune*, Rune*);
 void		htmlinit(void);

@@ -6,7 +6,9 @@
 extern "C" {
 #endif
 
-#define HAS_SYS_TERMIOS 1
+//#define HAS_SYS_TERMIOS 1
+//#define _STDIO_H_
+//#define FILE int
 
 #define __BSD_VISIBLE 1 /* FreeBSD 5.x */
 #if defined(__sun__)
@@ -44,6 +46,7 @@ extern "C" {
 #include <inttypes.h>
 
 #include <unistd.h>
+#include <stdio.h>	/* printf, also malloc.h includes it anyway */
 #include <string.h>
 #include <stdlib.h>
 #include <stdarg.h>

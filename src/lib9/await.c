@@ -92,13 +92,15 @@ _await(int pid4, char *str, int n, int opt)
 	for(;;){
 		/* On Linux, pid==-1 means anyone; on SunOS, it's pid==0. */
 		if(pid4 == -1)
-			pid = wait3(&status, opt, &ru);
+			//pid = wait3(&status, opt, &ru);
+			pid = waitpid(-1, &status, opt);
 		else
-			pid = wait4(pid4, &status, opt, &ru);
+			//pid = wait4(pid4, &status, opt, &ru);
+			pid = waitpid(pid4, &status, opt);
 		if(pid <= 0)
 			return -1;
-		u = ru.ru_utime.tv_sec*1000+((ru.ru_utime.tv_usec+500)/1000);
-		s = ru.ru_stime.tv_sec*1000+((ru.ru_stime.tv_usec+500)/1000);
+		u = 0; //ru.ru_utime.tv_sec*1000+((ru.ru_utime.tv_usec+500)/1000);
+		s = 0; // ru.ru_stime.tv_sec*1000+((ru.ru_stime.tv_usec+500)/1000);
 		if(WIFEXITED(status)){
 			status = WEXITSTATUS(status);
 			if(status)

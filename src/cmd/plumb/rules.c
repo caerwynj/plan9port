@@ -7,6 +7,9 @@
 #include <plumb.h>
 #include "plumber.h"
 
+#define getc plumb_getc
+#define getline plumb_getline
+
 typedef struct Input Input;
 typedef struct Var Var;
 

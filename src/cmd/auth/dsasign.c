@@ -7,6 +7,8 @@
 #include <9pclient.h>
 #include <bio.h>
 
+#define getline local_getline
+
 void
 usage(void)
 {

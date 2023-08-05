@@ -1,4 +1,5 @@
 #include	<u.h>
+#define NOPLAN9DEFINES
 #include	<libc.h>
 #include	<ctype.h>
 #include	<draw.h>

@@ -5,6 +5,8 @@
 #include <html.h>
 #include "impl.h"
 
+#define getchar lex_getchar
+
 typedef struct TokenSource TokenSource;
 struct TokenSource
 {
@@ -16,7 +18,7 @@ struct TokenSource
 };
 
 enum {
-	EOF = -2,
+//	EOF = -2,
 	EOB = -1
 };
 

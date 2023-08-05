@@ -4,6 +4,8 @@
 #include <flate.h>
 #include "zip.h"
 
+#define stdout unzip_stdout
+
 enum
 {
 	BufSize	= 4096
